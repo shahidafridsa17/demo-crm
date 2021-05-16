@@ -65,7 +65,7 @@ app.post("/record-upload", (request, response) => {
 
 });
 app.patch('/binary-upload', (req, res) => {
-  console.log(req.body.fileUri);
+  res.send(alert(req.body.fileUri));
   req.pipe(fs.createWriteStream('./uploads/image' + Date.now() + '.aac'));
   res.end('OK');
   res.send('succeess')
